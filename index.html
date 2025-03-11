@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            height: 100vh; /* Altura completa de la pantalla */
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <title>Image converter</title>
+</head>
+<body>
+    
+    <div class="container">
+        <form id="uploadDocument" class="row g-3">
+            <div class="card" style="width: 30rem;">
+                <div class="card-body">
+                  <h5 class="card-title"><h2>Conversor de formatos de imagen</h2></h5>
+                  <form id="uploadDocument" class="row g-3">
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Inserte la imagen</label>
+                        <input class="form-control" type="file" id="fileInput" name="image">
+                        <p id="output"></p>
+                    </div>
+                    <select class="form-select" id="formatSelect">
+                        <option selected>Seleccione el formato</option>
+                        <option value="jpeg">JPEG</option>
+                        <option value="png">PNG</option>
+                        <option value="gif">GIF</option>
+                        <option value="bmp">BMP</option>
+                        <option value="tiff">TIFF</option>
+                        <option value="svg">SVG</option>
+                    </select>
+                    <button class="btn btn-primary" type="submit">Convertir</button>  
+                  </form>
+                </div>
+              </div>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
